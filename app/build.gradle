@@ -72,7 +72,9 @@ android {
             // 混淆
             minifyEnabled true
             shrinkResources true
-            applicationIdSuffix  ".release"
+            // mk 自用版：独立包名，可与官方版并存；显示名区分
+            applicationIdSuffix  ".mk"
+            resValue("string", "app_name", "语燕输入法mk")
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard.cfg'
             signingConfig signingConfigs.release
         }
